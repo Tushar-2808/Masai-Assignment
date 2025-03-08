@@ -81,7 +81,7 @@
       .bigimage img {
         margin-left: 1%;
         width: 1650px;
-        height: 450px;
+        height: 500px;
       }
       .homegrown {
         height: 45px;
