@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masai Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .calculator {
+            display: grid;
+            grid-template-columns: repeat(4, 60px);
+            grid-template-rows: repeat(5, 60px);
+            gap: 10px;
+            padding: 20px;
+            background-color: #333;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .button {
+            background-color: #444;
+            border: none;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #555;
+        }
+        .button.operator {
+            background-color: #ff9500;
+        }
+        .button.operator:hover {
+            background-color: #ffaa33;
+        }
+        .button.clear {
+            background-color: #ff3b30;
+        }
+        .button.clear:hover {
+            background-color: #ff5c5c;
+        }
+        .button.equals {
+            background-color: #4cd964;
+            grid-column: span 2;
+        }
+        .button.equals:hover {
+            background-color: #5de673;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <div class="button">1</div>
+        <div class="button">2</div>
+        <div class="button">3</div>
+        <div class="button operator">-</div>
+        <div class="button">4</div>
+        <div class="button">5</div>
+        <div class="button">6</div>
+        <div class="button operator">x</div>
+        <div class="button">7</div>
+        <div class="button">8</div>
+        <div class="button">9</div>
+        <div class="button operator">/</div>
+        <div class="button clear">C</div>
+        <div class="button">0</div>
+        <div class="button equals">=</div>
+    </div>
+</body>
+</html>
