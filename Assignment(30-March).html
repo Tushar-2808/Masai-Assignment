@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe Sharing App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <h1>Reicpe Sharing</h1>
+        <nav>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#add-recipe">Add Recipe</a></li>
+            <li><a href="#browse">Browse</a></li>
+          </ul>
+        </nav>
+        <button id="dark-mode-toggle">Mode 🌓</button>
+      </div>
+    </header>
+    <main>
+      <section id="add-recipe" class="form-section">
+        <h2>Add New Recipe</h2>
+        <form id="recipe-form">
+          <div class="form-group">
+            <label for="recipe-name">Recipe Name: </label>
+            <input type="text" id="recipe-name" required />
+          </div>
+          <div class="form-group">
+            <label for="recipe-category">Category: </label>
+            <select id="recipe-category" required>
+              <option value="">Select a Category:</option>
+              <option value="breakfast">Breakfast</option>
+              <option value="lunch">Lunch</option>
+              <option value="dinner">Dinner</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Ingredients: </label>
+            <div id="ingredients-container">
+              <table id="ingredients-table">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Quantity</th>
+                    <th>Unit</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="ingredients-tbody">
+                  <!--Ingredients to be added here-->
+                </tbody>
+              </table>
+              <button type="button" id="add-ingredient" class="btn-secondary">
+                +Add Ingredients
+              </button>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="preparation-steps">Preparation Steps: </label>
+            <textarea id="preparation-steps" rows="6" required></textarea>
+            <div class="format-buttons">
+              <button type="button" class="format-btn" data-tag="b">B</button>
+              <button type="button" class="format-btn" data-tag="i">I</button>
+              <button type="button" class="format-btn" data-tag="sup">
+                Sup
+              </button>
+              <button type="button" class="format-btn" data-tag="sub">
+                Sub
+              </button>
+            </div>
+          </div>
+          <button type="submit" class="btn-primary">Save Recipe</button>
+        </form>
+      </section>
+      <section id="browse" class="recipes-section">
+        <h2>Brose Recipes</h2>
+        <label for="category-filter">Filter by Category: </label>
+        <select id="category-filter">
+          <option value="all">All Categories</option>
+          <option value="breakfast">Breakfast</option>
+          <option value="lunch">Lunch</option>
+          <option value="dinner">Dinner</option>
+        </select>
+        <div id="recipes-container" class="recipes-grid">
+          <!--Added Recipes to be showed here-->
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; All recipes shared with love</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
