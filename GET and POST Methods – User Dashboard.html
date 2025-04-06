@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>User Dashboard</h1>
+        
+        <div class="dashboard">
+            <!-- Add User Form -->
+            <div class="add-user-form">
+                <h2>Add New User</h2>
+                <form id="userForm">
+                    <div class="form-group">
+                        <label for="userName">Name:</label>
+                        <input type="text" id="userName" required>
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="userEmail">Email:</label>
+                        <input type="email" id="userEmail" required>
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+                    
+                    <button type="submit" id="addUserBtn">Add User</button>
+                </form>
+            </div>
+            
+            <!-- User List -->
+            <div class="user-list">
+                <h2>Registered Users</h2>
+                <div id="loading" class="loading">
+                    <div class="spinner"></div>
+                    <p>Loading users...</p>
+                </div>
+                
+                <div id="error" class="error hidden">
+                    <p>Failed to load users. Please try again.</p>
+                </div>
+                
+                <div id="usersContainer" class="users-container"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
