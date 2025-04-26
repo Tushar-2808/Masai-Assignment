@@ -1,11 +1,8 @@
-// app.js
-
 const form = document.getElementById("feedback-form");
 const input = document.getElementById("feedback-input");
 const feedbackList = document.getElementById("feedback-list");
 const themeToggle = document.getElementById("theme-toggle");
 
-// Submit feedback
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
   const text = input.value.trim();
@@ -38,7 +35,6 @@ db.collection("feedbacks")
     });
   });
 
-// Theme toggle
 themeToggle.addEventListener("click", () => {
   document.body.classList.toggle("dark-theme");
 });
